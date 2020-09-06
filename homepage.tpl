@@ -23,3 +23,15 @@ OR -- https://forum.textpattern.com/viewtopic.php?id=51028
   </txp:if_article_list>
   </txp:if_article_list>
 <txp:article />
+
+OR -- https://forum.textpattern.com/viewtopic.php?pid=325806
+
+<txp:if_request name="pg" type="get" match="pattern" value="[0-9]">
+I'm on page 2 or more (as page 1 has no "pg" query)
+<txp:else />
+I'm on page 1
+</txp:if_request>
+
+<txp:if_request name="pg" type="get" match="pattern" not value="[0-9]">
+   I'm on page 1
+</txp:if_request>
